@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div style="text-align: center;">
+
+        @if (!registerMode) {
+             <h1>Find your match</h1>
+        <p class="lead">If you are blushes with shame like a tomato, you've come to the right place!</p>
+        <p>All you need to do is sign up!</p>
+            
+            <!-- <h2>What is Tomato?</h2>
+            <p>Tomato is a dating app designed for those who feel shy or embarrassed about dating. We provide a safe and welcoming environment for you to find your perfect match.</p>
+            <p>Whether you're looking for friendship, romance, or just someone to talk to, Tomato is here to help you connect with others who understand your feelings.</p>
+        
+            <h2>How does it work?</h2>
+            <p>Simply sign up, create your profile, and start browsing potential matches. You can chat with others, share your interests, and find someone who shares your passion for tomatoes!</p>
+            <p>Our app is designed to be user-friendly and supportive, making it easy for you to take the first step towards finding your match.</p> -->
+        <div class="text-center">
+            <button (click)="registerToggle()" class="btn btn-danger btn-lg me-2">Register</button>
+            <button (click)="registerToggle()" class="btn btn-info btn-lg me-2">learn more</button>
+        </div>
+    
+} @else {
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <p>Ready to find your match? Sign up now and join our community of tomato lovers!</p>
+            <app-register 
+            (cancelRegister)="cancelRegisterMode($event)"
+            ></app-register>
+
+        </div>
+    </div>
+
+</div>
+}
+    </div>
+        
